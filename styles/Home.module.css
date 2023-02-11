@@ -1,0 +1,51 @@
+.container {
+  padding: '4px';
+ 
+}
+
+.main {
+  min-height: 100%;
+  padding: 2rem 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  
+}
+
+.divider 
+  {
+    width: 100%;
+    border-top: 2px solid #DFE3E6;
+    
+  }
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+  .grid {
+    width: 100%;
+    flex-direction: 'row';
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .card,
+  .footer {
+    border-color: #222;
+  }
+  .code {
+    background: #111;
+  }
+  .logo img {
+    filter: invert(1);
+  }
+}
