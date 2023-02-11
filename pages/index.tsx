@@ -184,14 +184,16 @@ const Home: NextPage = () => {
                     </div>
 
                     <div>
-                      <Button
-                        auto
-                        color="secondary"
-                        shadow
-                        onPress={() => setVisible(true)}
-                      >
-                        PAGAR
-                      </Button>
+                      {cart.length > 0 && (
+                        <Button
+                          auto
+                          color="secondary"
+                          shadow
+                          onPress={() => setVisible(true)}
+                        >
+                          PAGAR
+                        </Button>
+                      )}
                       <Modal
                         closeButton
                         blur
@@ -240,13 +242,18 @@ const Home: NextPage = () => {
                               currency: "BRL",
                             })}
                           </Text>
-                          {received && (
+                          {received - sum > 0 && (
                             <Text css={{ m: 0 }}>
                               <strong>TROCO: </strong>
                               {(received - sum).toLocaleString("pt-br", {
                                 style: "currency",
                                 currency: "BRL",
                               })}
+                            </Text>
+                          )}
+                          {received - sum <= 0 && (
+                            <Text css={{ m: 0 }} color="error">
+                              <strong>PAGAMENTO INCOMPLETO </strong>
                             </Text>
                           )}
                         </Modal.Body>
