@@ -42,7 +42,7 @@ function List({ cart, removeItem }: ListProps) {
   return (
     <Table
       aria-label="Example table with dynamic content"
-      css={{ minWidth: "100%", height: "calc($space$14 * 10)" }}
+      css={{width: "100%" }}
       color="secondary"
     >
       <Table.Header columns={columns}>
