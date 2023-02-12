@@ -39,14 +39,11 @@ interface ListProps {
 }
 
 function List({ cart, removeItem }: ListProps) {
-  console.log("carttttttt", cart);
   return (
     <Table
       aria-label="Example table with dynamic content"
-      css={{
-        height: "auto",
-        w: "100%",
-      }}
+      css={{ minWidth: "100%", height: "calc($space$14 * 10)" }}
+      color="secondary"
     >
       <Table.Header columns={columns}>
         {(column) => (
